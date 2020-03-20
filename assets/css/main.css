@@ -117,7 +117,7 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #9f3fec !important;
+			color: #d44a4a !important;
 		}
 
 	strong, b {
@@ -1786,7 +1786,7 @@ input, select, textarea {
 
 	header.major h2 {
 		color: #d44a4a;
-		font-size: 3.5em;
+		font-size: 3.0em;
 	}
 
 		header.major h2 + p {
@@ -2618,7 +2618,7 @@ input, select, textarea {
 		input[type="reset"].primary,
 		input[type="button"].primary,
 		.button.primary {
-			background-color: #9f3fec;
+			background-color: #d44a4a;
 			color: #ffffff !important;
 		}
 
@@ -2626,7 +2626,7 @@ input, select, textarea {
 			input[type="reset"].primary:hover,
 			input[type="button"].primary:hover,
 			.button.primary:hover {
-				background-color: #5ed0b1;
+				background-color: #d44a4a;
 			}
 
 			input[type="submit"].primary:active,
@@ -2720,7 +2720,7 @@ input, select, textarea {
 			}
 
 		#header header p {
-			color: #b7eadc;
+			color: #d44a4a;
 		}
 
 		#header a {
