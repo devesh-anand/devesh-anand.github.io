@@ -42,3 +42,6 @@ Another slavery is something I’m dead sure you are a victim of. It’s food. D
 Here's a mind blowing fact. A person having a protein rich breakfast will have higher chances of being agreeable, even going as far as to accept an unfair offer presented to them. Sounds funny, right? But it's serious. This is just one of the thousands of ways your mind, habits and ultimately life can be affected just by giving you a specific kind of diet, without any added drugs or chemicals.
 
 I'm sure you might have read again and again that junk/fast food is bad for health, and like most people, your mindset would be that it causes obesity, cholestrol and heart diseases, basically 'physical problems', but these foods have a far serious impact on your mental health.
+
+* **They make you a junkie.** Your taste-buds give you a pleasing sensation when you eat something. Basically, your brain secretes *dopamine*, which we discussed above.
+

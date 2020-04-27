@@ -6,5 +6,5 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 gem 'jekyll'
 gem 'jekyll-analytics'
-gem "rails"
+gem 'rails'
 gem 'jekyll-seo-tag'
