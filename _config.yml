@@ -10,5 +10,15 @@ url: "https://devesh-anand.github.io" # the base hostname & protocol for your si
 twitter_username: deveshanand18
 github_username:  devesh-anand
 
+plugins:
+  - jekyll-analytics
+  - jekyll-seo-tag
+
+
+jekyll_analytics:
+  GoogleAnalytics:
+    id: UA-163837086-1
+    anonymizeIp: false
+
 # Build settings
 markdown: kramdown
