@@ -13,7 +13,7 @@ I will explore the slavery you have put yourself into yourself. Knowingly or unk
 
 If you’re reading this in the 21st century, chances are you are already a victim of *‘[Digital Dementia](https://www.psychologytoday.com/intl/blog/mind-change/201507/digital-dementia)’*, in simple words, you are a slave to technology. Ever felt that you’re kind of lost and dizzy after a long session of screen time? Well, that is a clear symptom of dementia. And yes, I know there’s a difference between relying on something, and being a slave.
 
-Ok, so it started like it starts every time. In America, British settlers came, the Red Indians didn’t pay much attention, and boom, the land was no more their’s. Something same happened in India. Britishers came for trade, and we welcomed them with open arms. Trade was beneficial for sure, but we failed to keep their actions and desires in check. Result? 200 years of slavery.
+Ok, so it started like it starts every time. In America, British settlers came, the Red Indians didn’t pay much attention, and boom, the land was no more theirs. Something same happened in India. Britishers came for trade, and we welcomed them with open arms. Trade was beneficial for sure, but we failed to keep their actions and desires in check. Result? 200 years of slavery.
 
 The case with technology has been quite similar. Tech came in 1990s for the masses, suddenly erupted like wild fire in 2000s and was now a part of our lives. In this decade, we became heavily reliant on technology. Same mistake once again. We lost the track of when we became followers of technology, instead of it being the other way round. The time frame in which tech became mainstream is just too short, it is 15-20 years, and as expected, we humans couldn’t see the harmful impacts.
 
@@ -41,7 +41,18 @@ Another slavery is something I’m dead sure you are a victim of. It’s food. D
 
 Here's a mind blowing fact. A person having a protein rich breakfast will have higher chances of being agreeable, even going as far as to accept an unfair offer presented to them. Sounds funny, right? But it's serious. This is just one of the thousands of ways your mind, habits and ultimately life can be affected just by giving you a specific kind of diet, without any added drugs or chemicals.
 
-I'm sure you might have read again and again that junk/fast food is bad for health, and like most people, your mindset would be that it causes obesity, cholestrol and heart diseases, basically 'physical problems', but these foods have a far serious impact on your mental health.
+I'm sure you might have read again and again that junk/fast food is bad for health, and like most people, your mindset would be that it causes obesity, cholesterol and heart diseases, basically 'physical problems', but these foods have a far serious impact on your mental health.
 
 * **They make you a junkie.** Your taste-buds give you a pleasing sensation when you eat something. Basically, your brain secretes *dopamine*, which we discussed above.
 
+* **They mess with your [circadian rhythm](https://en.wikipedia.org/wiki/Circadian_rhythm).** 
+
+* **They affect your productivity.** Unhealthy diet impacts your circadian rhythm negatively, thus affecting your productivity. How? Not going to explain. Go read *circadian rhythm* through above link.
+
+You need to understand that your mind and body coexist. One's health affects the other's. Ever wondered why people suffering from depression become really thin(or fat)? Well, you know now.
+
+See, the thing is, you are a slave of your own desires(in a deep sense), and the reality is, you can get out of this slavery for sure, but it'll be hard. Your brain will eventually trick you, deceive you or even force you to continue your unproductive(and bad) habits, but with proper strategy and persistence, you shall get over this problem.
+
+There is a fantastic solution to your problem. To successfully deal with the problem, I advise you to take the [dopamine fast](https://www.youtube.com/watch?v=vl-44jDYDJQ). The video from improvement pill describes the **dopamine fast** in an outstanding manner.
+
+Keep going, never give up.
