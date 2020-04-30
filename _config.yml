@@ -2,9 +2,8 @@
 title: Devesh Anand
 email: contactdeveshanand@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Hi, I am Devesh. I have a soul of an artist. I draw, write and love standup 
+  comedy. If you have some time, try reading my blog.
 #baseurl: "/Read-Only-Jekyll-Theme" # the subpath of your site, e.g. /blog/
 url: "https://devesh-anand.github.io" # the base hostname & protocol for your site
 twitter_username: deveshanand18
