@@ -1,0 +1,26 @@
+# all of these fields are nested under the comments key, which corresponds to the final element
+# of the API bridge enpoint, i.e., you can different configurations even within the same staticman.yml
+# file all under different keys
+comments:
+
+  # There are many more required config values here, not shown:
+  # use the file linked above as a template
+
+  # I guess used only for email notifications?
+  name: "devesh-anand blog"
+
+  commitMessage: "New comment by {fields.name}"
+
+
+  # You may want a different set of "required fields". Staticman will
+  # reject posts without all of these fields
+  requiredFields: ["name", "email", "message"]
+
+  # you are going to want reCaptcha set up, but for now leave it disabled because we need the API
+  # bridge up and running in order to encrypt the secrets that go in this section
+  reCaptcha:
+    enabled: true
+    # the siteKey is used as-is (no encryption)
+    siteKey: 6Lf8wvMUAAAAAMwjwyghEI3RgCqaIvzkM2S4G2hc
+    # the secret is the encrypted blob you got back from the encrypt call
+    secret: ZiiV4VAWoctTT92vPQde//ujjqb1rZVC074L7swNKxpbIZ0XrhukloIUj4FL42i3qE2owFLAbvKV7U3RiiYAnYA0975v81Qh7yX3jiLrCYxLrr5MPhlee3lxcE61KyLG2oMRd84vIpVZg4kMh4fNFI+qRXIPLNo2VIYQc3nj7emRW4r6j+BGIjEztvM+wQI12mzrjVjg9TPMw6wvFL32OsAOZwwwxJMVyySgucXhN9zSgZ9TD1td5L9uGM9hJV4XymfTdcm5kfPp54y964X3Cu8f8VLS6y1ZOzEXUszLoQY7J3caeg9kX73PcX+o/z6f1Yr5RlEe8qZiRB34R2I3cvo86T+xbIYAW3ZeK7wQPlmY6iW0pftDFVk2dHEc5H3zoYuVRJ+EV41HbbsRnX7HxTXgMTne6v05hpY/97bZxDr02p2T8fh1HyQ+ujLcLVv6CIbDPv/Jss/dqAJwTtT/XzgorUx8wmBe49dt3Gx+E8JQhc8C+Oow87L7AUfc3osK7gWnpSY96spdiDJcjDDyQv+dwE11AVHZX8uasr3lmJn3wXDFq+0GT6jRET8+fZmpHEuXpomZQ3RF6PlcQ0Gpcjhiedjz+0YpEnISdqzw3r7EK/1uGosom3Z2/mzV42i6AtqU3+tCDgLMuLk4tAXu0NL/Gu8einndqaira6s0zw4=

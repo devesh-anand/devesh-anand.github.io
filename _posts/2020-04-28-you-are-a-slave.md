@@ -2,6 +2,7 @@
 layout: post
 title: You are a slave
 subtitle: Knowingly, or unknowingly
+comments: true
 ---
 
 ![slavery](/images/blog/slave.jpg)
