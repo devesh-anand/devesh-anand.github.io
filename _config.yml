@@ -10,6 +10,11 @@ url: "https://devesh-anand.github.io" # the base hostname & protocol for your si
 twitter_username: deveshanand18
 github_username:  devesh-anand
 
+author:
+  name: Devesh Anand
+  email: *email
+  twitter: deveshanand18
+
 defaults:
   - scope:
       path: "" # an empty string here means all files in the project
