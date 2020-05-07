@@ -5,8 +5,8 @@ description: > # this means to ignore newlines until "baseurl:"
   Hi, I am Devesh. I have a soul of an artist. I draw, write and love standup 
   comedy. If you have some time, try reading my blog.
 #baseurl: "/Read-Only-Jekyll-Theme" # the subpath of your site, e.g. /blog/
-url: "https://devesh-anand.github.io" # the base hostname & protocol for your site
 baseurl: ""
+url: "https://devesh-anand.github.io" # the base hostname & protocol for your site
 twitter_username: deveshanand18
 github_username:  devesh-anand
 
