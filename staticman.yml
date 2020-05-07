@@ -28,6 +28,7 @@ comments:
 
   requiredFields: ["name", "email", "message"]
 
+  path: "_data/comments/{options.slug}"
   # bridge up and running in order to encrypt the secrets that go in this section
   reCaptcha:
     enabled: true
