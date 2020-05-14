@@ -26,7 +26,7 @@ comments:
       options:
         format: "timestamp-seconds"
 
-  requiredFields: ["name", "email", "message"]
+  requiredFields: ["name", "message"]
 
   # Whether entries need to be approved before they are published to the main
   # branch. If set to `true`, a pull request will be created for your approval.
