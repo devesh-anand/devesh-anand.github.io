@@ -28,6 +28,11 @@ comments:
 
   requiredFields: ["name", "email", "message"]
 
+  # Whether entries need to be approved before they are published to the main
+  # branch. If set to `true`, a pull request will be created for your approval.
+  # Otherwise, entries will be published to the main branch automatically.
+  moderation: false
+
   path: "_data/comments/{options.slug}"
   # bridge up and running in order to encrypt the secrets that go in this section
   reCaptcha:

@@ -88,7 +88,7 @@
 			#titleBar .toggle:before {
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
-				font-family: 'Font Awesome 5 Brands';
+				font-family: 'Font Awesome 5 Free';
 				font-style: normal;
 				font-weight: normal;
 				text-transform: none !important;
@@ -97,7 +97,7 @@
 			#titleBar .toggle:before {
 				background: #d44a4a;
 				color: #ffffff;
-				content: '\f0c9';
+				content: url(/images/sidebutton.png);
 				display: block;
 				font-size: 18px;
 				height: 44px;

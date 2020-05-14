@@ -15,7 +15,7 @@
 	}
 
 	body, input, select, textarea {
-		color: #888;
+		color: rgb(63, 63, 63);
 		font-family: "Lato", sans-serif;
 		font-size: 16pt;
 		font-weight: 400;
