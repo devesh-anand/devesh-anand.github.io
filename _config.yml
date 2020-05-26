@@ -2,11 +2,11 @@
 title: Devesh Anand
 email: contactdeveshanand@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Hi, I am Devesh. I have a soul of an artist. I draw, write and love standup 
-  comedy. If you have some time, try reading my blog.
+  I am Devesh Anand. I draw, write and love standup 
+  comedy. Here I write my blog from time to time.
 #baseurl: "/Read-Only-Jekyll-Theme" # the subpath of your site, e.g. /blog/
 baseurl: ""
-url: "https://devesh-anand.github.io" # the base hostname & protocol for your site
+url: "https://deveshanand.com" # the base hostname & protocol for your site
 twitter_username: deveshanand18
 github_username:  devesh-anand
 
@@ -25,6 +25,7 @@ defaults:
 plugins:
   - jekyll-analytics
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 
 jekyll_analytics:

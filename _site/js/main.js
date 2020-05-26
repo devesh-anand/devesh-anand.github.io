@@ -18,7 +18,7 @@
         data: $(this).serialize(),
         contentType: 'application/x-www-form-urlencoded',
         success: function (data) {
-          showModal('Comment submitted', 'Thanks! Your comment is pending. It will appear when approved.');
+          showModal('Comment submitted', 'Thanks! Your comment will soon appear.');
   
           $("#comment-form-submit")
             .html("Submit");
