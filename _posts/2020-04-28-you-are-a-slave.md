@@ -3,6 +3,7 @@ layout: post
 title: You are a slave
 subtitle: Knowingly, or unknowingly
 description: You are a slave. You might be thinking what nonsense! It’s ok, that’s a normal human response to anything to which your belief system disagrees to.
+image: /images/blog/slave.jpg
 comments: true
 ---
 
