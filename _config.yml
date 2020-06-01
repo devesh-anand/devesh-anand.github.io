@@ -1,4 +1,5 @@
 # Site settings
+name: Devesh Anand
 title: Devesh Anand
 email: contactdeveshanand@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
@@ -26,6 +27,7 @@ plugins:
   - jekyll-analytics
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-feed
 
 
 jekyll_analytics:

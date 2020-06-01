@@ -54,7 +54,7 @@ GEM
       http_parser.rb (~> 0.6.0)
     erubi (1.9.0)
     eventmachine (1.2.7)
-    ffi (1.12.2)
+    ffi (1.13.0)
     forwardable-extended (2.6.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -75,6 +75,8 @@ GEM
       rouge (>= 1.7, < 4)
       safe_yaml (~> 1.0)
     jekyll-analytics (0.1.12)
+    jekyll-feed (0.13.0)
+      jekyll (>= 3.7, < 5.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
     jekyll-seo-tag (2.6.1)
@@ -166,6 +168,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll
   jekyll-analytics
+  jekyll-feed
   jekyll-seo-tag
   jekyll-sitemap
   rails
