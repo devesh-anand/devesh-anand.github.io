@@ -3,8 +3,9 @@ name: Devesh Anand
 title: Devesh Anand
 email: contactdeveshanand@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  I am Devesh Anand. I draw, write and love standup 
-  comedy. Here I write my blog from time to time.
+  I am Devesh Anand. This is my online haven where I share my thoughts 
+  and my work. 
+  I write my blog from time to time.
 #baseurl: "/Read-Only-Jekyll-Theme" # the subpath of your site, e.g. /blog/
 baseurl: ""
 url: "https://deveshanand.com" # the base hostname & protocol for your site
