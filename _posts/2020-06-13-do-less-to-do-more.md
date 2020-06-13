@@ -3,10 +3,10 @@ layout: post
 title: Do less, to do more
 subtitle: Less tasks, more focus
 description: The common(and deadly misconception) today is, "More productivity means more work". Well the more one works, the more productive one will be, right? Wrong. It's a trap. Productivity is about efficient work, not *"more"* work.
-image: /images/blog/do-less-to-do-more.jpg
+image: /images/blog//do less to do more/do-less-to-do-more.jpg
 comments: true
 ---
-![do less to do more](/images/blog/do-less-to-do-more.jpg)
+![do less to do more](/images/blog/do less to do more/do-less-to-do-more.jpg)
 
 Let me take you through the routine of our forefathers. Waking up early, cleaning their teeth, pooping, bathing, then having some breakfast with family and then finally going to work. Working the whole day and the coming back to the house. Having food, spending time talking to loved ones, doing some house chores and finally going to sleep. Once in a while they went to watch theatre, movie or puppet-show(depending on the era they lived in), which took place at a specific period of every month.
 
@@ -18,6 +18,11 @@ The common(and deadly misconception) today is: *"More productivity means more wo
 <hr>
 <h3>80/20 rule (<a href="https://en.wikipedia.org/wiki/Pareto_principle" target="_blank"><u>Pareto principle</u></a>) :</h3>
 
+<figure>
+    <img src='/images/blog/do less to do more/Pareto-Principle.png' alt='Pareto principle' />
+    <figcaption>Pareto principle</figcaption>
+</figure>
+<br>
 "80% of results are based on 20% of your input". The numbers may go up and down a little bit, but what really matters is the fact that a small proportion of work efforts result in maximum results. This principle given by <a href="https://en.wikipedia.org/wiki/Vilfredo_Pareto" target="_blank">
 Vilfredo Pareto</a> was initially a economic principle, but research proved that it can be applied to a wide variety of fields, which includes productivity. You can apply this rule almost everywhere. From studies, to daily house chores, or even your to-do list.
 
@@ -29,6 +34,11 @@ Now how to use this principle? Start by being impartial. Ask yourself which task
 <hr>
 <h3>Fear Of Missing Out (FOMO) :</h3>
 
+<figure>
+    <img src='/images/blog/do less to do more/FOMO.png' alt='Fear Of Missing Out' />
+    <figcaption>Fear Of Missing Out</figcaption>
+</figure>
+<br>
 What were the last 3 webseries/shows/anime you watched? Ask yourself genuinely whether you actually were interested in them, or was it because of the fact that everyone else was watching it. A lot of times you might have done things just because you wanted to be part of some conversation, conversation that will perhaps never matter in your life again. Constantly surfing you social-media feeds so that you don't miss someone's status updates. This constant anxiety(or fear) of being connected with what others are doing is toxic, costs your mental peace in long term and ultimately affects your productivity.
 
 Latest trends feed on what I call, **"The collective anxiety"**. You're not alone. There are millions more struggling with FOMO and meaningless trends(or challenges) catch fire online due to this reason. Even big corporations use your weakness in their marketing <a href="https://en.wikipedia.org/wiki/Fear_of_missing_out#Marketing_technique" target="_blank">strategies</a>.
@@ -41,7 +51,7 @@ Solution? Understand that you are not missing out. Keep check of your social med
 <h3>The Paradox Of Choices :</h3>
 
 <figure>
-    <img src='/images/blog/steveattire.jpg' alt='steve jobs attire' />
+    <img src='/images/blog/do less to do more/steveattire.jpg' alt='steve jobs attire' />
     <figcaption>Steve Jobs in same attire at different keynotes</figcaption>
 </figure>
 <br>
