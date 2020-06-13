@@ -3,10 +3,10 @@ layout: post
 title: Do less, to do more
 subtitle: Less tasks, more focus
 description: The common(and deadly misconception) today is, "More productivity means more work". Well the more one works, the more productive one will be, right? Wrong. It's a trap. Productivity is about efficient work, not *"more"* work.
-image: /images/blog//do less to do more/do-less-to-do-more.jpg
+image: /images/blog//do less to do more/time-fading.jpg
 comments: true
 ---
-![do less to do more](/images/blog/do less to do more/do-less-to-do-more.jpg)
+![do less to do more](/images/blog/do less to do more/time-fading.jpg)
 
 Let me take you through the routine of our forefathers. Waking up early, cleaning their teeth, pooping, bathing, then having some breakfast with family and then finally going to work. Working the whole day and the coming back to the house. Having food, spending time talking to loved ones, doing some house chores and finally going to sleep. Once in a while they went to watch theatre, movie or puppet-show(depending on the era they lived in), which took place at a specific period of every month.
 
