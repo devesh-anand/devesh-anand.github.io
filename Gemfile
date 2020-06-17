@@ -4,9 +4,10 @@ source "https://rubygems.org"
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
-gem "jekyll", github: "jekyll/jekyll"
+gem 'jekyll' #, github: "jekyll/jekyll"
 gem 'jekyll-analytics'
 gem 'rails'
 gem 'jekyll-seo-tag'
 gem 'jekyll-sitemap'
 gem 'jekyll-feed'
+gem 'jekyll-sass-converter'
