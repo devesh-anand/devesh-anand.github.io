@@ -28,6 +28,6 @@ Talking about all the resentment in the world, the wars(in life as well as on th
 Before I start with the rules, the foremost rule is that you must take responsibility for your own life.
 
 <hr>
-<h3>Rule 1: Stand Up Straight With your Shoulders Back</h3>
+### Rule 1: Stand Up Straight With your Shoulders Back
 
-*To put it in simple words, the rule asks you to be more confident, stand 
+*To put it in simple words, the rule asks you to be more confident, stand*
