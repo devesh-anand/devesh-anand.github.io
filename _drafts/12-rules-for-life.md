@@ -11,7 +11,7 @@ comments: true
 
 The book defines some rules, or morals, that we humans should abide by in life to live a meaningful life. The rules are not exactly rules, but a pathway to minimize suffering and misery in life, for the rules(and Peterson's lectures) are based on the harsh truth of life: "Life is suffering".
 
-Peterson has been described as a curious and fascinating human by his colleague, Dr. Norman Doige in the foreword. In the world where we humans value our freedom so much, why would we like ***more*** rules in life? Because without rules, there no line, and when there's bo line, `"we quickly become slaves to our passions- and there's nothing freeing about that."` If we humans don't take responsibility, our very own existence becomes a misery, because without responsibilities, there's simply no meaning in life, and a life without meaning is more of a burden than a blessing.
+Peterson has been described as a curious and fascinating human by his colleague, Dr. Norman Doige in the foreword. In the world where we humans value our freedom so much, why would we like ***more*** rules in life? Because without rules, there's no line, and when there's no line, `"we quickly become slaves to our passions- and there's nothing freeing about that."` If we humans don't take responsibility, our very own existence becomes a misery, because without responsibilities, there's simply no meaning in life, and a life without meaning is more of a burden than a blessing.
 
 Peterson was deeply affected by the underlying principles of World Wars and Cold war, which is proving superiority of ideology. The fact that more than 200 million lives were taken(and that too by their own leaders) in name of an ***identity*** was horrific. He has his house decorated with paintings of soviet revolution, not because he is a fan of Communism, but as a reminder of the genocide(s) in the name of utopia.
 
@@ -28,6 +28,24 @@ Talking about all the resentment in the world, the wars(in life as well as on th
 Before I start with the rules, the foremost rule is that you must take responsibility for your own life.
 
 <hr>
+
 ### Rule 1: Stand Up Straight With your Shoulders Back
 
-*To put it in simple words, the rule asks you to be more confident, stand*
+*To put it in simple words, the rule asks you to be more confident, striving to be better*
+
+The chapter starts with the analogy of hierarchy in lobsters and humans. 
+
+Peterson talks about hierarchies in detail, how they affect us, our confidence and our chances of future success. He explains why it is a bad idea to be at the lower part of dominance hierarchy. 
+
+Being in lower part of dominance hierarchy means lacking resources, power and ultimately confidence. When one is at the lower part of dominance hierarchy, the person is always subconsciously stressed. In their life, if one thing goes wrong, hell breaks loose.
+
+In every crisis situation, be it local or global, the humans in lower part of dominance hierarchy pay the heaviest price. In a pandemic, it's the poor who suffer the most. In economic crash, it's the poor who lose the most jobs.
+>"When the aristocracy catches a cold, as it is said, the working class dies of pneumonia."
+
+
+
+### Rule 2: Treat yourself Like someone you are responsible for helping
+
+### Rule 3: Make friends with people who want the best for you
+
+### Rule 4: Compare yourself to who you were yesterday, not to who someone else is today
