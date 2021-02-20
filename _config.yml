@@ -13,7 +13,7 @@ twitter_username: deveshanand18
 github_username:  devesh-anand
 
 author:
-  name: Devesh Anand
+  name: Devesh Anand Srivastava
   email: *email
   twitter: deveshanand18
 
@@ -39,6 +39,10 @@ jekyll_analytics:
 
 # Build settings
 markdown: kramdown
+
+exclude:
+- path
+
 
 staticman_url: https://deveshblogcomments.herokuapp.com/v2/entry/devesh-anand/devesh-anand.github.io/master/comments
 
