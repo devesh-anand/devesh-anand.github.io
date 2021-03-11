@@ -71,7 +71,7 @@ GEM
       http_parser.rb (~> 0.6.0)
     erubi (1.10.0)
     eventmachine (1.2.7)
-    ffi (1.14.2)
+    ffi (1.15.0)
     forwardable-extended (2.6.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -124,8 +124,8 @@ GEM
     mimemagic (0.3.5)
     mini_mime (1.0.2)
     mini_portile2 (2.5.0)
-    minitest (5.14.3)
-    nio4r (2.5.5)
+    minitest (5.14.4)
+    nio4r (2.5.7)
     nokogiri (1.11.1)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
@@ -202,4 +202,4 @@ DEPENDENCIES
   rails
 
 BUNDLED WITH
-   2.2.11
+   2.2.14
