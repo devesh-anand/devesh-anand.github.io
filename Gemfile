@@ -15,3 +15,4 @@ gem "jekyll-sass-converter"
 gem "wdm"
 
 gem "webrick", "~> 1.7"
+gem "actionpack", ">= 6.1.4.2"

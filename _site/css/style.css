@@ -1238,3 +1238,10 @@ figcaption {
    font-size: 32px;
    padding: 0 4px;
 }
+
+@media only screen and (max-width: 524px) {
+   ul.feature-icons li {
+      margin: 0 0 1.6875em 15%;
+      padding: 0.35em 0 0 1.5em;
+   }
+}
