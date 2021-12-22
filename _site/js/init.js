@@ -26,7 +26,7 @@
 					height: 44,
 					position: 'top-left',
 					side: 'top',
-					html: '<span class="toggle" data-action="toggleLayer" data-args="sidePanel"></span><span class="title" data-action="copyText" data-args="logo"></span>'
+					html: '<span class="toggle" data-action="toggleLayer" data-args="sidePanel"><i class="fa fa-bars"></i></span><a href="/"><span class="title" data-action="copyText" data-args="logo"></span></a>'
 				},
 				sidePanel: {
 					breakpoints: 'medium',
