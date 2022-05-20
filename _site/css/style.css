@@ -1239,6 +1239,11 @@ figcaption {
    padding: 0 4px;
 }
 
+.iconify {
+  position: relative;
+  top: 8px;
+}
+
 @media only screen and (max-width: 524px) {
    ul.feature-icons li {
       margin: 0 0 1.6875em 15%;
