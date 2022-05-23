@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/eventmachine/eventmachine.git
+  revision: 9cb13a8a62363df5ebcc414169a3deb2c1608528
+  tag: v1.2.7
+  specs:
+    eventmachine (1.2.7)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -77,8 +84,6 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
     erubi (1.10.0)
-    eventmachine (1.2.7)
-    eventmachine (1.2.7-x64-mingw32)
     ffi (1.15.5)
     ffi (1.15.5-x64-mingw32)
     forwardable-extended (2.6.0)
@@ -217,6 +222,7 @@ PLATFORMS
 
 DEPENDENCIES
   actionpack (>= 6.1.4.2)
+  eventmachine (= 1.2.7)!
   jekyll
   jekyll-analytics
   jekyll-feed

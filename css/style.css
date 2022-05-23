@@ -1244,9 +1244,37 @@ figcaption {
   top: 8px;
 }
 
+.banner-before::before {
+  background-image: url(../images/banner.jpg);
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 15em;
+    width: 100%;
+}
+
+.container-custom {
+  padding: 4em 4em;
+}
+
 @media only screen and (max-width: 524px) {
    ul.feature-icons li {
       margin: 0 0 1.6875em 15%;
       padding: 0.35em 0 0 1.5em;
    }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .banner-before::before {
+    height: 10em;
+  }
+}
+
+@media screen and (max-width: 735px) {
+  .banner-before::before {
+    height: 7em;
+  }
 }
