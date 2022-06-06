@@ -36,4 +36,8 @@
 <loc>http://localhost:4000/protected/hey-witch.html</loc>
 <lastmod>2021-03-28T12:57:26+05:30</lastmod>
 </url>
+<url>
+<loc>http://localhost:4000/resume.pdf</loc>
+<lastmod>2022-06-06T19:16:03+05:30</lastmod>
+</url>
 </urlset>

@@ -38,7 +38,11 @@ a {
 
 a:hover {
    border-bottom-color: transparent;
-   color: #d44a4a !important;
+   color: #d44a4a;
+}
+
+.btn a:hover {
+   color: white !important;
 }
 
 strong,

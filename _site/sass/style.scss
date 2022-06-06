@@ -34,7 +34,7 @@ $size-header: 23em;
 		
 		&:hover {
 			border-bottom-color: transparent;
-			color: $color-accent-bg !important;
+			color: $color-accent-bg;
 		}
 	}
 
@@ -875,7 +875,7 @@ $size-header: 23em;
 			color: $color-header-fg;
 			
 			&:hover {
-				color: $color-header-fg-bold !important;
+				color: $color-header-fg-bold;
 			}
 		}
 
