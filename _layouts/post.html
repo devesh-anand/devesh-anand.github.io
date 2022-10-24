@@ -19,11 +19,10 @@ layout: default
             {% if page.next %}
             <a href="{{ page.next.url }}" class="float-right">Next post &rarr;</a> {% endif %}
         </footer>
+        <br>
         {% include share-bar.html %}
         
-        {% if page.comments == true %}
-            {% include comments.html %}
-        {% endif %}
+        <!-- removing comments for good, too much spam -->
     </div>
 
 </section>
