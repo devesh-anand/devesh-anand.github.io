@@ -1,4 +1,5 @@
 ---
+layout: "../../../../layouts/Old.astro"
 title: You are a slave
 pubDatetime: 2020-04-28T15:00:00.0000
 slug: 2020/04/28/you-are-a-slave.html

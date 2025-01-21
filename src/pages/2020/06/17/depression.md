@@ -1,10 +1,11 @@
 ---
+layout: "../../../../layouts/Old.astro"
 title: Depression
 subtitle: It's serious
 pubDatetime: 2020-06-17T00:00:00.0000
 featured: true
 draft: false
-slug: 2020/06/17/depression.html
+slug: depression.html
 description: Stop misusing the word "depression". Scoring less marks, losing a game or failing in some pursuit is not depression. Sadness? Yes, depression? Absolutely not. 
 image: /images/blog/depression.jpg
 old: true
