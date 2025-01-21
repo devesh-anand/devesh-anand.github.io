@@ -9,14 +9,9 @@ export const SITE: Site = {
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
-  postPerPage: 3,
+  postPerPage: 4,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
   showArchives: true,
-  // editPost: {
-  //   url: "/edit/main/src/content/blog",
-  //   text: "Suggest Changes",
-  //   appendFilePath: true,
-  // },
 };
 
 export const LOCALE = {

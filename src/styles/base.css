@@ -104,6 +104,12 @@
     word-wrap: break-word;
   }
 
+  figcaption {
+    font-style: italic;
+    padding: 2px;
+    text-align: center;
+  }
+
   pre > code {
     white-space: pre;
   }
