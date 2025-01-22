@@ -9,14 +9,6 @@ image: /images/blog/slave.jpg
 old: true
 ---
 
-author: Sat Naing
-pubDatetime: 2023-01-30T15:57:52.737Z
-slug: astro-paper-2
-featured: false
-ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
-tags:
-  - release
-
 ![slavery](/images/blog/slave.jpg)
 
 You are a slave. You might be thinking what nonsense! It’s ok, that’s a normal human response to anything to which your belief system disagrees to.    
