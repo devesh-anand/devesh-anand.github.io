@@ -6,6 +6,13 @@ import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
 import { SITE } from "./src/config";
 
+const redirects = {
+  "/2020/05/28/fear.html": "/2020/05/28/fear",
+  "/2020/06/17/depression.html": "/2020/06/17/depression",
+  "/2020/06/13/do-less-to-do-more.html": "/2020/06/13/do-less-to-do-more",
+  "/2020/05/03/problems.html": "/2020/05/03/problems",
+  "/2020/04/28/you-are-a-slave.html": "/2020/04/28/you-are-a-slave",
+}
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
@@ -43,4 +50,5 @@ export default defineConfig({
   experimental: {
     contentLayer: true,
   },
+  redirects
 });

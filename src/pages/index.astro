@@ -14,7 +14,7 @@ const posts = await getCollection("blog");
 
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
-const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
+const recentPosts = sortedPosts.filter(({ data }) => !data.featured && !data.old);
 
 const socialCount = SOCIALS.filter(social => social.active).length;
 ---
@@ -23,7 +23,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
-      <h1>Mingalaba</h1>
+      <h1>Hi there!</h1>
       <a
         target="_blank"
         href="/rss.xml"
@@ -42,18 +42,11 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       </a>
 
       <p>
-        Hi, I'm Devesh, a software engineer by profession, with varied interests ranging from gaming, reading to performance arts. I'm well-versed with software engineering principles and practices overall now and can confidently write good, scalable and maintainable code.
+        I'm Devesh, a software engineer by profession, with varied interests ranging from gaming, reading, to performance arts. I'm well-versed with software engineering principles and practices overall now and can confidently write good, scalable and maintainable code.
         </p>
 
       <p>
-        I have experience developing full-stack, production ready applications working previously with 
-        <a 
-          href="https://www.itmtb.com/" 
-          target="_blank"
-          class="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
-        >
-          itmtb.com
-        </a>.
+        I have experience developing full-stack, production ready applications working on large scale products.
         Currently working as a full time software engineer at 
         <a 
           href="https://www.gocobalt.io/" 

@@ -1,7 +1,7 @@
 ---
 title: You are a slave
 pubDatetime: 2020-04-28T15:00:00.0000
-slug: 2020/04/28/you-are-a-slave.html
+slug: 2020-04-28-you-are-a-slave
 subtitle: Knowingly, or unknowingly
 description: You are a slave. You might be thinking what nonsense! It’s ok, that’s a normal human response to anything to which your belief system disagrees to.
 image: /images/blog/slave.jpg

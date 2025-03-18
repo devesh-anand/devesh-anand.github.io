@@ -2,10 +2,9 @@
 title: Do less, to do more
 subtitle: Less tasks, more focus
 pubDatetime: 2020-06-13T00:00:00.0000
-slug: 2020/06/13/do-less-to-do-more.html
+slug: 2020-06-13-do-less-to-do-more
 description: The common(and deadly misconception) today is, "More productivity means more work". Well the more one works, the more productive one will be, right? Wrong. It's a trap. Productivity is about efficient work, not *"more"* work.
 image: /images/blog//do less to do more/time-fading.jpg
-comments: true
 ---
 <figure>
     <img src='/images/blog/do less to do more/time-fading.jpg' alt='do less to do more image' />
