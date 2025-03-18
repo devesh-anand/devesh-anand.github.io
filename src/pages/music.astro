@@ -1,0 +1,69 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import Hr from "@components/Hr.astro";
+import { SITE } from "@config";
+
+const title = `Music | ${SITE.title}`;
+---
+
+<Layout title={title} description={SITE.desc}>
+  <Header />
+  <main id="main-content">
+    <section id="music">
+      <h2 class="my-8">Here are some of my favorite playlists that I listen to.</h2>
+      
+      <div class="space-y-12">
+        <div class="playlist-container">
+          <iframe
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/playlist/01vR5e06LxuSHVUeq5zued?utm_source=generator"
+            width="100%"
+            height="380"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          ></iframe>
+        </div>
+
+        <div class="playlist-container">
+          <iframe
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/playlist/74XDxRoBoY6P5BjNzhegcd?utm_source=generator"
+            width="100%"
+            height="380"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          ></iframe>
+        </div>
+
+        <div class="playlist-container">
+          <iframe
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/playlist/4AK7YTZGRz5GXq1zceKXGp?utm_source=generator"
+            width="100%"
+            height="380"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .playlist-container {
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s ease;
+  }
+  .playlist-container:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+</style> 
