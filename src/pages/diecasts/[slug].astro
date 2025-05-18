@@ -1,0 +1,143 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Main from '../../layouts/Main.astro';
+import { Image } from 'astro:assets';
+import { getCollection, type CollectionEntry } from 'astro:content';
+import Tag from '../../components/Tag.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+export async function getStaticPaths() {
+  const carEntries = await getCollection('cars');
+  return carEntries.map((entry: CollectionEntry<'cars'>) => ({
+    params: { slug: entry.slug },
+    props: { car: entry },
+  }));
+}
+
+interface Props {
+  car: CollectionEntry<'cars'>;
+}
+
+const { car } = Astro.props;
+const { data } = car;
+
+interface Photo {
+  image_url: string;
+  is_main?: boolean;
+}
+
+let mainImageUrl: string | null | undefined = null;
+let otherImages: Photo[] = [];
+
+if (data.photo_gallery && data.photo_gallery.length > 0) {
+  const mainPhoto = data.photo_gallery.find((p: Photo) => p.is_main === true);
+  if (mainPhoto) {
+    mainImageUrl = mainPhoto.image_url;
+    otherImages = data.photo_gallery.filter((p: Photo) => p.image_url !== mainImageUrl);
+  } else {
+    mainImageUrl = data.photo_gallery[0]?.image_url;
+    otherImages = data.photo_gallery.slice(1);
+  }
+}
+---
+
+<Layout title={data.name}>
+<Header />
+  <Main pageTitle={data.name || "Car Details"} pageDesc={`${data.brand || "Unknown Brand"} ${data.name || ""}`.trim()}>
+    <article class="bg-white dark:bg-zinc-800 shadow-lg rounded-lg overflow-hidden mt-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+        <div class="md:col-span-1 p-4 md:p-6">
+          {mainImageUrl ? (
+            <div class="mb-4 shadow-md rounded-lg overflow-hidden bg-zinc-100 dark:bg-zinc-700 aspect-[4/3]">
+              <Image 
+                src={mainImageUrl} 
+                alt={`Main image of ${data.name}`}
+                width={640}
+                height={480}
+                format="webp"
+                quality={80}
+                class="w-full h-full object-contain transition-transform duration-300 ease-in-out hover:scale-105"
+              />
+            </div>
+          ) : (
+             <div class="w-full aspect-[4/3] bg-zinc-200 dark:bg-zinc-700 flex items-center justify-center rounded-lg mb-4">
+                <span class="text-zinc-500 dark:text-zinc-400">No Main Image</span>
+            </div>
+          )}
+          {otherImages.length > 0 && (
+            <div class="grid grid-cols-3 gap-2">
+              {otherImages.map((photo: Photo) => (
+                <div class="shadow-sm rounded-md overflow-hidden bg-zinc-100 dark:bg-zinc-700 aspect-square">
+                  <Image 
+                    src={photo.image_url} 
+                    alt={`Image of ${data.name}`}
+                    width={150}
+                    height={150}
+                    format="webp"
+                    quality={75}
+                    class="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+        
+        <div class="md:col-span-2 p-4 md:p-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 mb-6 text-zinc-700 dark:text-zinc-300">
+            <div>
+              <strong class="block text-sm text-zinc-500 dark:text-zinc-400">Brand:</strong>
+              <span>{data.brand || "N/A"}</span>
+            </div>
+            {data.series && (
+              <div>
+                <strong class="block text-sm text-zinc-500 dark:text-zinc-400">Series:</strong>
+                <span>{data.series}</span>
+              </div>
+            )}
+            {data.model_year && (
+              <div>
+                <strong class="block text-sm text-zinc-500 dark:text-zinc-400">Model Year:</strong>
+                <span>{data.model_year}</span>
+              </div>
+            )}
+            <div>
+              <strong class="block text-sm text-zinc-500 dark:text-zinc-400">Scale:</strong>
+              <span>{data.scale || "N/A"}</span>
+            </div>
+            {data.status && (
+              <div>
+                <strong class="block text-sm text-zinc-500 dark:text-zinc-400">Status:</strong>
+                <span class="capitalize">{data.status.replace('_', ' ')}</span>
+              </div>
+            )}
+          </div>
+
+          {data.tags && data.tags.length > 0 && (
+            <div class="mb-6">
+              <strong class="block text-sm text-zinc-500 dark:text-zinc-400 mb-2">Tags:</strong>
+              <ul class="flex flex-wrap gap-2">
+                {data.tags.map((tagString: string) => <Tag tag={tagString} size="sm" basePath="/diecasts/tags" />)}
+              </ul>
+            </div>
+          )}
+
+          {data.notes && (
+            <div class="mb-6 prose dark:prose-invert max-w-none prose-sm sm:prose-base">
+              <strong class="block text-sm text-zinc-500 dark:text-zinc-400 mb-1">Notes:</strong>
+              <div set:html={data.notes} /> 
+            </div>
+          )}
+        </div>
+      </div>
+    </article>
+  </Main>
+  <Footer />
+</Layout>
+
+<style>
+  .object-contain {
+    object-fit: contain;
+  }
+</style> 

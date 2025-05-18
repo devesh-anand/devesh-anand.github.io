@@ -1,10 +1,15 @@
 ---
+import { slugifyStr } from "../utils/slugify";
+
 export interface Props {
   tag: string;
   size?: "sm" | "lg";
+  basePath?: string;
 }
 
-const { tag, size = "sm" } = Astro.props;
+const { tag, size = "sm", basePath = "/tags" } = Astro.props;
+const slugifiedTag = slugifyStr(tag);
+const finalPath = `${basePath.endsWith('/') ? basePath : basePath + '/'}${slugifiedTag}/`;
 ---
 
 <li
@@ -13,7 +18,7 @@ const { tag, size = "sm" } = Astro.props;
   }`}
 >
   <a
-    href={`/tags/${tag}/`}
+    href={finalPath}
     transition:name={tag}
     class={`${size === "sm" ? "text-sm" : "text-lg"} pr-2 group`}
   >

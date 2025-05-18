@@ -34,4 +34,27 @@ const blog = defineCollection({
     }),
 });
 
-export const collections = { blog };
+const carsCollection = defineCollection({
+  type: 'content', // 'content' for Markdown, 'data' for JSON/YAML
+  schema: z.object({
+    name: z.string(),
+    brand: z.string(),
+    series: z.string().optional(),
+    model_year: z.number().optional(),
+    photo_gallery: z.array(z.object({
+      image_url: z.string(), // Path to image in /public
+      is_main: z.boolean().optional(),
+    })).min(1), // Must have at least one image
+    scale: z.string().default('1:64'),
+    purchase_price: z.number().optional(), // Not displayed on site
+    tags: z.array(z.string()).default([]),
+    status: z.enum(['for_trade'/*, 'in_collection', 'wishlist'*/]).optional(), // Add more statuses later
+    notes: z.string().optional(),
+    // No need for 'body' here if all content is in frontmatter
+  }),
+});
+
+export const collections = {
+  blog,
+  cars: carsCollection,
+};

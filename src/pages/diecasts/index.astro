@@ -1,0 +1,61 @@
+---
+import Layout from '../../layouts/Layout.astro'; // Adjust path if your Layout is elsewhere
+import CarCard from '../../components/CarCard.astro'; // Adjust path if your CarCard is elsewhere
+import { getCollection, type CollectionEntry } from 'astro:content';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Search from '../../components/Search.tsx';
+
+// Define the SearchItem type expected by Search.tsx (can be imported or defined here)
+// For simplicity, defining a compatible structure here.
+export type SearchItemForCars = {
+  title: string;
+  description: string;
+  data: CollectionEntry<'cars'>['data']; // Using car data type
+  slug: string;
+};
+
+
+// Fetch all car entries
+const allCars = await getCollection('cars');
+
+// Transform cars to SearchItemForCars[]
+const searchFriendlyCars: SearchItemForCars[] = allCars.map(car => ({
+  title: car.data.name || "Unnamed Car",
+  description: `${car.data.brand || "Unknown Brand"}${car.data.series ? ` - ${car.data.series}` : ""}`,
+  data: car.data, // Pass car.data directly
+  slug: `diecasts/${car.slug}`, // Ensure slug leads to the correct car page
+}));
+
+
+const pageTitle = "Diecast Car Collection";
+---
+
+<Layout title={pageTitle}>
+  <Header />
+  <main class="container mx-auto px-4 py-8">
+    <h1 class="text-4xl font-bold text-zinc-900 dark:text-zinc-100 mb-8 text-center">{pageTitle}</h1>
+    
+    <div class="mb-8">
+      <Search client:load searchList={searchFriendlyCars as any} />
+    </div>
+
+    {allCars.length === 0 ? (
+      <p class="text-center text-zinc-600 dark:text-zinc-400">No cars in the collection yet. Start adding some!</p>
+    ) : (
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {allCars.map(car => (
+          <CarCard car={car} />
+        ))}
+      </div>
+    )}
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  /* Add any page-specific styles here */
+  .container {
+    max-width: 1280px;
+  }
+</style> 

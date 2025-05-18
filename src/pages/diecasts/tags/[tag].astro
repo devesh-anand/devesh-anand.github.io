@@ -1,0 +1,61 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Main from '../../../layouts/Main.astro';
+import { getCollection } from 'astro:content';
+import CarCard from '../../../components/CarCard.astro';
+import { slugifyStr as slugify } from "../../../utils/slugify";
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+
+export async function getStaticPaths() {
+  const carEntries = await getCollection('cars');
+  const allTags = new Set<string>();
+  carEntries.forEach(entry => {
+    entry.data.tags?.forEach(tag => allTags.add(slugify(tag)));
+  });
+
+  return Array.from(allTags).map(tag => ({
+    params: { tag },
+  }));
+}
+
+const { tag } = Astro.params;
+const carEntries = await getCollection('cars');
+
+let originalTagName = tag;
+const foundEntryWithTag = carEntries.find(entry => 
+  entry.data.tags?.some(t => slugify(t) === tag)
+);
+if (foundEntryWithTag) {
+  originalTagName = foundEntryWithTag.data.tags?.find(t => slugify(t) === tag) || tag;
+}
+
+const filteredCars = carEntries.filter(entry => {
+  return entry.data.tags?.map(t => slugify(t)).includes(tag || "");
+});
+
+const pageTitle = `Cars tagged: ${originalTagName}`;
+const pageDesc = `All diecast cars in the collection tagged with "${originalTagName}".`;
+---
+
+<Layout title={pageTitle}>
+  <Header />
+  <Main {pageTitle} {pageDesc}>
+    {filteredCars.length > 0 ? (
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+        {filteredCars.map(car => (
+          <CarCard {car} />
+        ))}
+      </div>
+    ) : (
+      <p class="text-center mt-8 text-lg text-zinc-500 dark:text-zinc-400">
+        No cars found with the tag "{originalTagName}".
+      </p>
+    )}
+  </Main>
+  <Footer />
+</Layout>
+
+<style>
+  /* Add any specific styles for this page if needed */
+</style> 

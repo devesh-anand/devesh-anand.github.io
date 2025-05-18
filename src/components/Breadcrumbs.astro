@@ -44,7 +44,7 @@ breadcrumbList[0] === "tags" &&
           </li>
         ) : (
           <li>
-            <a href={`/${breadcrumb}/`}>{breadcrumb}</a>
+            <a href={`/${breadcrumbList.slice(0, index + 1).join('/')}/`}>{breadcrumb}</a>
             <span aria-hidden="true">&raquo;</span>
           </li>
         )

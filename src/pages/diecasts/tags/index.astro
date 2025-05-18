@@ -1,0 +1,66 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Main from '../../../layouts/Main.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+import { slugifyStr as slugify } from "../../../utils/slugify";
+
+// Fetch all car entries
+const carEntries = await getCollection('cars');
+
+// Get all unique tags from car data
+const allTags = new Set<string>();
+carEntries.forEach(entry => {
+  if (entry.data.tags && Array.isArray(entry.data.tags)) {
+    entry.data.tags.forEach(tag => {
+      if (typeof tag === 'string') {
+        // Add tag if it's a non-empty string
+        const trimmedTag = tag.trim();
+        if (trimmedTag.length > 0) {
+          allTags.add(trimmedTag);
+        }
+      }
+    });
+  }
+});
+
+// Sort tags alphabetically
+const sortedTags = Array.from(allTags).sort((a, b) => a.localeCompare(b));
+
+const pageTitle = "All Diecast Tags";
+const pageDesc = "Browse all tags for the diecast car collection.";
+
+// Function to count cars for a given tag
+const getCarCountForTag = (tagName: string) => {
+  return carEntries.filter(car => car.data.tags?.includes(tagName)).length;
+};
+---
+
+<Layout title={pageTitle} description={pageDesc}>
+  <Header />
+  <Main {pageTitle} {pageDesc}>
+    {sortedTags.length > 0 ? (
+      <div class="mt-8 flex flex-wrap gap-3">
+        {sortedTags.map(tagName => (
+          <a
+            href={`/diecasts/tags/${slugify(tagName)}/`}
+            
+            aria-label={`View cars tagged with ${tagName} (${getCarCountForTag(tagName)})`}
+          >
+            #{tagName}<span class="opacity-75 ml-1 mr-4">({getCarCountForTag(tagName)})</span>
+          </a>
+        ))}
+      </div>
+    ) : (
+      <p class="text-center mt-8 text-lg text-zinc-500 dark:text-zinc-400">
+        No tags found in the diecast collection.
+      </p>
+    )}
+  </Main>
+  <Footer />
+</Layout>
+
+<style>
+  /* You can add specific styles here if needed */
+</style> 
