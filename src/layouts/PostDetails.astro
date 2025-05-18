@@ -28,8 +28,6 @@ const {
   editPost,
 } = post.data;
 
-const { Content } = await post.render();
-
 const ogImageUrl = typeof ogImage === "string" ? ogImage : ogImage?.src;
 const ogUrl = new URL(
   ogImageUrl ?? `/${slugifyStr(title)}.png`,
@@ -49,12 +47,12 @@ const layoutProps = {
 
 /* ========== Prev/Next Posts ========== */
 
-const allPosts = posts.map(({ data: { title }, slug }) => ({
+const allPosts = posts.map(({ data: { title, slug } }) => ({
   slug,
   title,
 }));
 
-const currentPostIndex = allPosts.findIndex(a => a.slug === post.slug);
+const currentPostIndex = allPosts.findIndex(a => a.slug === post.data.slug);
 
 const prevPost = currentPostIndex !== 0 ? allPosts[currentPostIndex - 1] : null;
 const nextPost =
@@ -87,7 +85,8 @@ const nextPost =
       postId={post.id}
     />
     <article id="article" class="prose mx-auto mt-8 max-w-3xl">
-      <Content />
+      <!-- post.body is HTML string -->
+      <div set:html={post.rendered.html} />
     </article>
 
     <ul class="my-8">

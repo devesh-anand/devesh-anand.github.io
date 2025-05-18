@@ -13,12 +13,26 @@ const posts = await getCollection("blog", ({ data }) => !data.draft);
 const sortedPosts = getSortedPosts(posts);
 
 // List of items to search in
-const searchList = sortedPosts.map(({ data, slug }) => ({
+const postsList = sortedPosts.map(({ data, slug }) => ({
   title: data.title,
   description: data.description,
   data,
   slug,
 }));
+
+const carsList = await getCollection("cars");
+const sortedCars = carsList.map(({ data, slug }) => ({
+  title: data.name,
+  description: data.brand,
+  data: {
+    ...data,
+    title: data.name,
+    description: data.brand
+  },
+  slug,
+}));
+
+const searchList = [...postsList, ...sortedCars];
 ---
 
 <Layout title={`Search | ${SITE.title}`}>

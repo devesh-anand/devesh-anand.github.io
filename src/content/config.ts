@@ -30,6 +30,7 @@ const blog = defineCollection({
           appendFilePath: z.boolean().optional(),
         })
         .optional(),
+      slug: z.string(),
       old: z.boolean().optional(),
     }),
 });

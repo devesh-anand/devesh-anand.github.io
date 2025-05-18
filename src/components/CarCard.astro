@@ -12,7 +12,7 @@ const getDisplayImage = () => {
   if (!car.data.photo_gallery || car.data.photo_gallery.length === 0) {
     return null;
   }
-  const mainImage = car.data.photo_gallery.find(photo => photo.is_main === true);
+  const mainImage = car.data.photo_gallery.find((photo: { is_main: boolean }) => photo.is_main === true);
   const imageUrl = mainImage ? mainImage.image_url : car.data.photo_gallery[0]?.image_url;
 
   // Images from DecapCMS are in `public` folder, so their paths are root-relative
@@ -26,7 +26,7 @@ const displayImageSrc = getDisplayImage();
 const carUrl = `/diecasts/${car.slug}/`;
 ---
 
-<article class="group block overflow-hidden rounded-lg border border-zinc-200 dark:border-zinc-700 shadow-sm transition-all duration-300 ease-in-out hover:shadow-md dark:hover:shadow-zinc-700/50">
+<article className="group block overflow-hidden rounded-lg border border-zinc-200 dark:border-zinc-700 shadow-sm transition-all duration-300 ease-in-out hover:shadow-md dark:hover:shadow-zinc-700/50">
   <a href={carUrl} aria-label={`View details for ${car.data.name}`}>
     {displayImageSrc ? (
       <Image
@@ -39,17 +39,17 @@ const carUrl = `/diecasts/${car.slug}/`;
         class="w-full h-60 object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
       />
     ) : (
-      <div class="w-full h-60 bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center text-zinc-500 dark:text-zinc-400">
+      <div className="w-full h-60 bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center text-zinc-500 dark:text-zinc-400">
         <span>No Image Available</span>
       </div>
     )}
-    <div class="p-4">
-      <h3 class="text-lg font-semibold text-zinc-900 dark:text-zinc-100 mb-1 truncate group-hover:text-sky-600 dark:group-hover:text-sky-400">
+    <div className="p-4">
+      <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100 mb-1 truncate group-hover:text-sky-600 dark:group-hover:text-sky-400">
         {car.data.name || "Unnamed Car"}
       </h3>
-      <p class="text-sm text-zinc-600 dark:text-zinc-400">{car.data.brand || "Unknown Brand"}</p>
+      <p className="text-sm text-zinc-600 dark:text-zinc-400">{car.data.brand || "Unknown Brand"}</p>
       {car.data.series && (
-        <p class="text-xs text-zinc-500 dark:text-zinc-500 mt-1 italic">
+        <p className="text-xs text-zinc-500 dark:text-zinc-500 mt-1 italic">
           Series: {car.data.series}
         </p>
       )}
