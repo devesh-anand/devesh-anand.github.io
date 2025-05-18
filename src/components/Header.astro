@@ -70,6 +70,16 @@ const { activeNav } = Astro.props;
               Contact
             </a>
           </li>
+          <li class="relative group">
+            <button class="focus-outline" aria-expanded="false" aria-controls="more-dropdown-items">
+              More...
+            </button>
+            <ul id="more-dropdown-items" class="absolute hidden bg-skin-fill shadow-md rounded-md py-1 mt-1 w-full z-20 right-0 sm:left-0 flex flex-col items-center">
+              <li><a href="/diecasts" class="block px-4 py-2 text-sm hover:bg-skin-accent hover:text-skin-inverted">Diecasts</a></li>
+              <li><a href="/music" class="block px-4 py-2 text-sm hover:bg-skin-accent hover:text-skin-inverted">Music</a></li>
+              {/* Add more links here as needed */}
+            </ul>
+          </li>
           {
             SITE.showArchives && (
               <li>
@@ -222,6 +232,27 @@ const { activeNav } = Astro.props;
   .menu-icon.is-active .close {
     @apply opacity-100;
   }
+
+  /* Styles for the 'More...' dropdown */
+  nav ul li.relative > button {
+    @apply w-full px-4 py-3 text-center font-medium hover:text-skin-accent sm:my-0 sm:px-2 sm:py-1;
+  }
+
+  nav ul li.relative > button.active { /* Assuming you might want an active state for the button itself */
+    @apply underline decoration-wavy decoration-2 underline-offset-4;
+  }
+
+  #more-dropdown-items li a {
+    @apply w-full px-4 py-2 block; 
+  }
+
+  #more-dropdown-items li a:hover {
+    @apply bg-skin-accent text-skin-inverted;
+  }
+
+  #more-dropdown-items {
+    z-index: 20; 
+  }
 </style>
 
 <script>
@@ -247,4 +278,29 @@ const { activeNav } = Astro.props;
 
   // Runs on view transitions navigation
   document.addEventListener("astro:after-swap", toggleNav);
+
+  function toggleDropdown() {
+    const dropdownBtn = document.querySelector(".relative.group > button");
+    const dropdownItems = document.querySelector("#more-dropdown-items");
+
+    if (dropdownBtn && dropdownItems) {
+      dropdownBtn.addEventListener("click", (event) => {
+        event.stopPropagation(); // Prevent event from bubbling up to document click listener
+        const isExpanded = dropdownBtn.getAttribute("aria-expanded") === "true";
+        dropdownBtn.setAttribute("aria-expanded", !isExpanded ? "true" : "false");
+        dropdownItems.classList.toggle("hidden");
+      });
+
+      // Close dropdown if clicked outside
+      document.addEventListener("click", (event) => {
+        if (!dropdownBtn.contains(event.target as Node) && !dropdownItems.contains(event.target as Node)) {
+          dropdownBtn.setAttribute("aria-expanded", "false");
+          dropdownItems.classList.add("hidden");
+        }
+      });
+    }
+  }
+
+  toggleDropdown();
+  document.addEventListener("astro:after-swap", toggleDropdown);
 </script>
