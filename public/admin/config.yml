@@ -28,7 +28,13 @@ collections:
           - { label: "Is Main Photo?", name: "is_main", widget: "boolean", default: false, required: false }
       - { label: "Scale", name: "scale", widget: "string", required: true, default: "1:64" }
       - { label: "Purchase Price (Hidden on site)", name: "purchase_price", widget: "number", required: false, value_type: "float" }
-      - { label: "Tags", name: "tags", widget: "list", required: true, default: [], allow_add: true }
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        required: true
+        default: []
+        allow_add: true
+        field: { label: "Tag", name: "tag_item", widget: "string" }
       - label: "Status"
         name: "status"
         widget: "select"
