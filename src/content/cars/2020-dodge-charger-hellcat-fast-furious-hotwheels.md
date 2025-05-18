@@ -8,4 +8,7 @@ scale: 1:64
 purchase_price: 800
 tags:
   - hotwheels
+  - fast&furious
+  - hotwheels-premium
+notes: ""
 ---
