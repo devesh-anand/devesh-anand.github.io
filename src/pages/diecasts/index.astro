@@ -1,30 +1,22 @@
 ---
 import Layout from '../../layouts/Layout.astro'; // Adjust path if your Layout is elsewhere
 import CarCard from '../../components/CarCard.astro'; // Adjust path if your CarCard is elsewhere
-import { getCollection, type CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import Search from '../../components/Search.tsx';
-
-// Define the SearchItem type expected by Search.tsx (can be imported or defined here)
-// For simplicity, defining a compatible structure here.
-export type SearchItemForCars = {
-  title: string;
-  description: string;
-  data: CollectionEntry<'cars'>['data']; // Using car data type
-  slug: string;
-};
-
+import CarsSearch from '../../components/CarsSearch.tsx';
+import type { CarSearchItem } from '../../components/CarsSearch.tsx'; // Use the type from CarsSearch
 
 // Fetch all car entries
 const allCars = await getCollection('cars');
 
-// Transform cars to SearchItemForCars[]
-const searchFriendlyCars: SearchItemForCars[] = allCars.map(car => ({
+// Transform cars to CarSearchItem[]
+// This type is now compatible with CarsSearch.tsx and its onSearchUpdate callback
+const searchFriendlyCars: CarSearchItem[] = allCars.map(car => ({
   title: car.data.name || "Unnamed Car",
   description: `${car.data.brand || "Unknown Brand"}${car.data.series ? ` - ${car.data.series}` : ""}`,
   data: car.data, // Pass car.data directly
-  slug: `diecasts/${car.slug}`, // Ensure slug leads to the correct car page
+  slug: `diecasts/${car.slug}`, // Ensure slug leads to the correct car page (this is the href path)
 }));
 
 
@@ -37,25 +29,102 @@ const pageTitle = "Diecast Car Collection";
     <h1 class="text-4xl font-bold text-zinc-900 dark:text-zinc-100 mb-8 text-center">{pageTitle}</h1>
     
     <div class="mb-8">
-      <Search client:load searchList={searchFriendlyCars as any} />
+      <CarsSearch client:load searchList={searchFriendlyCars} onSearchUpdate="handleCarSearchUpdate" />
     </div>
 
-    {allCars.length === 0 ? (
-      <p class="text-center text-zinc-600 dark:text-zinc-400">No cars in the collection yet. Start adding some!</p>
-    ) : (
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {allCars.map(car => (
+    <div id="car-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      {allCars.length === 0 ? (
+        <p class="text-center text-zinc-600 dark:text-zinc-400 col-span-full">No cars in the collection yet. Start adding some!</p>
+      ) : (
+        allCars.map(car => (
           <CarCard car={car} />
-        ))}
-      </div>
-    )}
+        ))
+      )}
+    </div>
   </main>
   <Footer />
 </Layout>
+
+<script define:vars={{ initialSearchFriendlyCars: searchFriendlyCars }}>
+  function renderCarCardHTML(carItem) {
+    const { data, slug } = carItem;
+    const name = data.name || "Unnamed Car";
+    const brand = data.brand || "Unknown Brand";
+    const series = data.series || "";
+    const carLink = `/${slug}`;
+
+    // Logic to get display image URL, adapted from CarCard.astro
+    let displayImageSrc = null;
+    if (data.photo_gallery && data.photo_gallery.length > 0) {
+      const mainImage = data.photo_gallery.find(photo => photo.is_main === true);
+      displayImageSrc = mainImage ? mainImage.image_url : data.photo_gallery[0]?.image_url;
+    }
+
+    const imageHTML = displayImageSrc
+      ? `<img src="${displayImageSrc}" alt="Image of ${name}" class="w-full h-60 object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"/>`
+      : '<div class="w-full h-60 bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center text-zinc-500 dark:text-zinc-400"><span>No Image Available</span></div>';
+
+    // Updated to match CarCard.astro structure and classes
+    return `
+      <article class="group block overflow-hidden rounded-lg border border-zinc-200 dark:border-zinc-700 shadow-sm transition-all duration-300 ease-in-out hover:shadow-md dark:hover:shadow-zinc-700/50">
+        <a href="${carLink}" aria-label="View details for ${name}">
+          ${imageHTML}
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-zinc-900 dark:text-zinc-100 mb-1 truncate group-hover:text-sky-600 dark:group-hover:text-sky-400">
+              ${name}
+            </h3>
+            <p class="text-sm text-zinc-600 dark:text-zinc-400">${brand}</p>
+            ${series ? `<p class="text-xs text-zinc-500 dark:text-zinc-500 mt-1 italic">Series: ${series}</p>` : ""}
+          </div>
+        </a>
+      </article>
+    `;
+  }
+
+  window.handleCarSearchUpdate = (filteredCarItems) => {
+    const carGrid = document.getElementById('car-grid');
+    if (!carGrid) {
+      console.error("Car grid container not found.");
+      return;
+    }
+
+    carGrid.innerHTML = ''; // Clear existing cards
+
+    if (filteredCarItems.length === 0) {
+      if (initialSearchFriendlyCars.length === 0) {
+         carGrid.innerHTML = '<p class="text-center text-zinc-600 dark:text-zinc-400 col-span-full">No cars match your search criteria.</p>';
+      } else {
+         carGrid.innerHTML = '<p class="text-center text-zinc-600 dark:text-zinc-400 col-span-full">No cars match your search criteria.</p>';
+      }
+    } else {
+      filteredCarItems.forEach(carItem => {
+        carGrid.innerHTML += renderCarCardHTML(carItem);
+      });
+    }
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+       // Check if CarsSearch already called it. If not, we might call it.
+       // However, CarsSearch will call onSearchUpdate on load with the searchList (all cars initially).
+       // So, explicitly calling it here might be redundant or cause a quick double render.
+       // The `CarsSearch` component should handle the initial call itself via its useEffect.
+       // If CarsSearch.tsx's onSearchUpdate is correctly passing the initial `searchList` (searchFriendlyCars)
+       // when the input is empty (which it does), then the initial render is handled.
+    });
+  } else {
+    // DOMContentLoaded has already fired
+    // Same logic as above, relying on CarsSearch to make the initial call.
+  }
+</script>
 
 <style>
   /* Add any page-specific styles here */
   .container {
     max-width: 1280px;
+  }
+  /* Ensure col-span-full works as expected if parent is grid */
+  #car-grid p.col-span-full {
+    grid-column: 1 / -1;
   }
 </style> 
