@@ -2,6 +2,9 @@ backend:
   name: github
   repo: devesh-anand/devesh-anand.github.io
   branch: master
+  # base_url: http://localhost:8080/github
+  base_url: https://api.deveshanand.com/github
+  # site_domain: www.deveshanand.com
 
 media_folder: "public/uploads/diecast"
 public_folder: "/uploads/diecast"
