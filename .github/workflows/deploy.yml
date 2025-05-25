@@ -17,6 +17,11 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env: # Set environment variables for the build job
+      NEXT_PUBLIC_TINA_CLIENT_ID: ${{ secrets.NEXT_PUBLIC_TINA_CLIENT_ID }}
+      TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
+      NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
+      TINA_PUBLIC_IS_LOCAL: 'false' # Ensure this is set for production builds
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
