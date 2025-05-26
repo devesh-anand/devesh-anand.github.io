@@ -1,0 +1,9 @@
+---
+name: Dragtor
+brand: Hotwheels
+photo_gallery:
+  - image_url: /uploads/diecast/dragtor.jpg
+    is_main: true
+scale: '1:64'
+---
+
