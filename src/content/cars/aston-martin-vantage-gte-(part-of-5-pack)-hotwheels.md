@@ -1,0 +1,14 @@
+---
+name: Aston Martin Vantage GTE (Part of 5 Pack)
+brand: Hotwheels
+series: HW Motor Show
+photo_gallery:
+  - image_url: /uploads/diecast/aston-martin-vantage-gte.jpg
+    is_main: true
+scale: '1:64'
+purchase_price: 179
+tags:
+  - mainline
+  - hotwheels
+---
+
