@@ -26,7 +26,10 @@ const pageTitle = "Diecast Car Collection";
 <Layout title={pageTitle}>
   <Header />
   <main class="container mx-auto px-4 py-8">
-    <h1 class="text-4xl font-bold text-zinc-900 dark:text-zinc-100 mb-8 text-center">{pageTitle}</h1>
+    <h1 class="text-4xl font-bold text-zinc-900 dark:text-zinc-100 mb-2 text-center">{pageTitle}</h1>
+    <p class="text-center text-zinc-600 dark:text-zinc-400 mb-8">
+      {allCars.length === 0 ? "No cars in collection" : `${allCars.length} car${allCars.length === 1 ? "" : "s"} in collection`}
+    </p>
     
     <div class="mb-8">
       <CarsSearch client:load searchList={searchFriendlyCars} onSearchUpdate="handleCarSearchUpdate" />
