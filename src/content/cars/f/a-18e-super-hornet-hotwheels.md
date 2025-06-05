@@ -1,5 +1,5 @@
 ---
-name: F/A-18E Super Hornet
+name: FA-18E Super Hornet
 brand: Hotwheels
 series: Top Gun Maverick
 photo_gallery:
@@ -11,5 +11,6 @@ tags:
   - plane
   - premium
   - hotwheels
+notes: ''
 ---
 
