@@ -23,6 +23,12 @@ const config = defineConfig({
   schema: {
     collections: [CarsCollection],
   },
+  search: {
+    tina: {
+      indexerToken: process.env.NEXT_PUBLIC_TINA_INDEXER_TOKEN!,
+    },
+    maxSearchIndexFieldLength: 100,
+  },
 });
 
 export default config;
