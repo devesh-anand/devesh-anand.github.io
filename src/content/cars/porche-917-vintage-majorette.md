@@ -8,7 +8,9 @@ photo_gallery:
     is_main: true
 scale: '1:64'
 tags:
+  - moving-parts
   - vintage
   - majorette
+notes: ''
 ---
 
