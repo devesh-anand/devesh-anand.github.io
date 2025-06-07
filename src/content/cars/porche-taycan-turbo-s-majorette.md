@@ -1,5 +1,5 @@
 ---
-name: Porche Taycan Turbo S
+name: Porsche Taycan Turbo S
 brand: Majorette
 photo_gallery:
   - image_url: /uploads/diecast/porche-taycan-turbo-s-and-917-trailer.jpg

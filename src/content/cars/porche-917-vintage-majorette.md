@@ -1,5 +1,5 @@
 ---
-name: Porche 917 Vintage
+name: Porsche 917 Vintage
 brand: Majorette
 photo_gallery:
   - image_url: /uploads/diecast/porche-taycan-turbo-s-and-917-trailer.jpg

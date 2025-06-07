@@ -1,5 +1,5 @@
 ---
-name: 'Proche 911 GT3 R #9'
+name: 'Porsche 911 GT3 R #9'
 brand: miniGT
 photo_gallery:
   - image_url: /uploads/diecast/porche-911-gt3-r.jpg
