@@ -1,0 +1,34 @@
+---
+import { SITE } from "@config";
+import Breadcrumbs from "@components/Breadcrumbs.astro";
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout title={`Gaming | ${SITE.title}`}>
+  <Header />
+  <Breadcrumbs />
+  <main id="main-content">
+    <section id="gaming" class="prose mb-28 max-w-3xl prose-img:border-0">
+      <h1 class="text-2xl tracking-wider sm:text-3xl">Gaming</h1>
+      <p>
+        I've been gaming for as long as I can remember. Mostly PC — a lot of CS, some RPGs, and
+        whatever else catches my eye. My CS2 inventory is sitting at over ₹60k in skins, which is
+        either a hobby or a problem depending on who you ask.
+      </p>
+      <p>
+        Want a Steam banner like this for your own profile? I built a tool for it —
+        <a href="https://steam.deveshanand.com" target="_blank" rel="noopener noreferrer">steam.deveshanand.com</a>.
+      </p>
+      <a href="https://steamcommunity.com/profiles/76561198386606986" target="_blank" rel="noopener noreferrer">
+        <img
+          src="https://steam.deveshanand.com/api/steam-banner?id=76561198386606986&theme=default&stats=true&recent=true&style=banner&font=classic&blurBackground=true"
+          alt="Steam Profile"
+          class="w-full rounded-lg"
+        />
+      </a>
+    </section>
+  </main>
+  <Footer />
+</Layout>

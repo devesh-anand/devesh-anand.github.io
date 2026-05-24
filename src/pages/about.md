@@ -3,17 +3,18 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-Hi, I'm Devesh, a software engineer by profession, with varied interests ranging from gaming, reading to performance arts. I'm well-versed with software engineering principles and practices overall now and can confidently write good, scalable and maintainable code.
+Hi, I'm Devesh. I'm a software engineer who's gravitated toward backend and distributed systems — drawn to problems of scale, coordination, and reliability.
 
-I have experience developing full-stack, production ready applications working previously with <a href="https://www.itmtb.com/" target="_blank" class="underline decoration-dashed underline-offset-4 hover:text-skin-accent">
-  itmtb.com
-</a>. Currently working as a full time software engineer at <a href="https://www.gocobalt.io/" 
-target="_blank" class="underline decoration-dashed underline-offset-4 hover:text-skin-accent">
-  Cobalt
-</a>. I am a big fan of video games. You can check out my experiment projects on my github below.
+I currently work at <a href="https://www.refold.ai/" target="_blank" class="underline decoration-dashed underline-offset-4 hover:text-skin-accent">Refold.ai</a> (formerly Cobalt), where I build workflow orchestration and integration infrastructure, scaling execution pipelines that process over a million workflow executions a day.
 
-I am also an eloquent speaker, a fellow debater and an amateur student of philosophy and arts. If you want to connect with me, your can reach me through my handles at [contact](/contact) page.
+## What I work on
 
-## Tech Stack
+My engineering focus is on the harder parts of distributed systems: workflow engines, multi-tenant architectures, integration platforms, and reliable execution infrastructure. I care about scalability, system design, and building things that hold up under real-world load.
 
-This theme is written in vanilla JavaScript (+ TypeScript for type checking) and a little bit of ReactJS for some interactions. TailwindCSS is used for styling; and Markdown is used for blog contents.
+I work primarily in Go and Node.js, with deep experience in Temporal for workflow orchestration, Kubernetes, PostgreSQL, and Redis.
+
+## Beyond engineering
+
+I enjoy writing, gaming, music, philosophy, and building small tools and side projects. I'm also an amateur student of philosophy and the arts.
+
+If you'd like to connect, you can reach me through my handles on the [contact](/contact) page.

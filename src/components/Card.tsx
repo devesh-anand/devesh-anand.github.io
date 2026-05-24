@@ -36,7 +36,7 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
           <Datetime pubDatetime={pubDatetime} modDatetime={modDatetime} />
         )
       }
-      <p>{description}</p>
+      <p className="mt-2 leading-7">{description}</p>
     </li>
   );
 }

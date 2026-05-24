@@ -23,7 +23,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
-      <h1>Hi there!</h1>
+      <h1>Hi, I'm Devesh.</h1>
       <a
         target="_blank"
         href="/rss.xml"
@@ -41,21 +41,19 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         <span class="sr-only">RSS Feed</span>
       </a>
 
-      <p>
-        I'm Devesh, a software engineer by profession, with varied interests ranging from gaming, reading, to performance arts. I'm well-versed with software engineering principles and practices overall now and can confidently write good, scalable and maintainable code.
+      <div class="prose max-w-none">
+        <p>
+          I'm a backend and distributed systems engineer currently building workflow orchestration and integration infrastructure at <a href="https://www.refold.ai/" target="_blank" class="underline decoration-dashed underline-offset-4 hover:text-skin-accent">Refold.ai</a>, scaling execution pipelines that process over a million workflow executions a day.
         </p>
 
-      <p>
-        I have experience developing full-stack, production ready applications working on large scale products.
-        Currently working as a full time software engineer at 
-        <a 
-          href="https://www.refold.ai/" 
-          target="_blank"
-          class="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
-        >
-          refold.ai
-        </a>.<br>
-      </p>
+        <p>
+          Over the last few years, I've worked on large-scale workflow engines, multi-tenant systems, integration platforms, and distributed execution infrastructure, primarily in Go and Node.js, with Temporal, Kubernetes, and PostgreSQL.
+        </p>
+
+        <p>
+          Outside engineering, I enjoy writing, gaming, music, philosophy, and building small tools.
+        </p>
+      </div>
 
       {
         // only display if at least one social link is enabled
@@ -138,9 +136,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   }
   #hero .rss-icon {
     @apply mb-2 h-6 w-6 scale-110 fill-skin-accent sm:mb-3 sm:scale-125;
-  }
-  #hero p {
-    @apply my-2;
   }
   .social-wrapper {
     @apply mt-4 flex flex-col sm:flex-row sm:items-center;
