@@ -33,7 +33,7 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
       </a>
       {
         pubDatetime && (
-          <Datetime pubDatetime={pubDatetime} modDatetime={modDatetime} />
+          <Datetime pubDatetime={pubDatetime} modDatetime={modDatetime} className="mt-1" />
         )
       }
       <p className="mt-2 leading-7">{description}</p>
