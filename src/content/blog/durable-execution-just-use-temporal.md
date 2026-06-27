@@ -4,7 +4,7 @@ description: "Why we migrated to Temporal at Refold, the patterns we use, how it
 pubDatetime: 2026-06-27T12:00:00.0000
 slug: durable-execution-just-use-temporal
 featured: true
-ogImage: /images/blog/temporal-banner.svg
+ogImage: /images/blog/temporal-banner.png
 tags: ["software", "engineering", "temporal"]
 ---
 
