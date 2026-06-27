@@ -3,7 +3,7 @@ title: How computers generate random numbers
 description: Random numbers are not that random, or are they?
 pubDatetime: 2021-05-18T12:00:00.0000
 slug: how-computers-generate-random-numbers
-featured: true
+featured: false
 tags: ["software"]
 ---
 
@@ -117,4 +117,3 @@ function linearCongruentialMethod(Xo, m,  a, c,
 
 Credits: Geeksforgeeks
 ```
-
